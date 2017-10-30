@@ -13,9 +13,7 @@ The package exposes a queuing interface with two simple commands: `Push` and `Po
 then the job is kept on the queue, if no error is returned, then the job is popped off
 the queue and removed from the backing kv-store.
 
-The default implementation of the queue uses ideas found in:
-
-`https://github.com/facebook/rocksdb/wiki/Implement-Queue-Service-Using-RocksDB`
+The default implementation of the queue uses ideas found in ["Implent Queue Service Using RocksDB"](https://github.com/facebook/rocksdb/wiki/Implement-Queue-Service-Using-RocksDB)
 
 Namely, the default implementation generates a unique identifier for the job item with
 the following key pattern `<queue>|<priority>|<unique_sequence>`, where `unique_sequence`
