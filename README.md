@@ -57,9 +57,9 @@ Examples of usage can be found in the tests or the examples directory, but the A
     priority := uint32(rand.Intn(10))                // the priority
 
     jid, err := queue.Push("queue_name", jobs.Job{
-			Data:     data,
-			Priority: priority,
-		})
+      Data:     data,
+      Priority: priority,
+    })
     if err != nil {
       // handle errors
     }
